@@ -59,6 +59,7 @@ const hexToRgb = (hexType) => {
 
   value = hex.match(/[a-f\d]{2}/gi);
 
+  if (value == null) return { r: 0, g: 0, b: 0};
   const r = parseInt(value[0], 16);
   const g = parseInt(value[1], 16);
   const b = parseInt(value[2], 16);

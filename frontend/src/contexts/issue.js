@@ -12,7 +12,8 @@ const issueReducer = (state, action) => {
 
 export const loadIssues = async (dispatch, query = '') => {
   try {
-    const response = await axios.get(`http://api.hoyoung.me/api/issue?${query}`, {
+    console.log(index.domain);
+    const response = await axios.get(`http://49.50.166.157:3000/api/issue?${query}`, {
       withCredentials: true,
     });
     console.log(response.data);

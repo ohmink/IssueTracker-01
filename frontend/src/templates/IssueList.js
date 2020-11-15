@@ -6,6 +6,7 @@ import { useIssueState } from '@contexts/issue';
 
 const LabelList = ({ history }) => {
   const issues = useIssueState();
+  console.log(issues);
   return (
     <div>
       <ListHead>

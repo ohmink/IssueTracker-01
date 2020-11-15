@@ -5,25 +5,26 @@ import TableList  from '../organisms/milestone/TableList';
 import TabButton from '../components/label/TabButton';
 import GreenButton from '@components/utils/GreenButton';
 
-
 const MilestonePage = styled.div`
-    width: 78%;
     margin: 0 auto;
 `;
 
 const Buttons = styled.div`
   display: flex;
-  margin-left: 8px;
-  padding-left: 8px;
-  justify-content: flex-end;
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 `;
 
 const Milestone = () => {
     return <MilestonePage>
-        <Buttons>
+        <FlexDiv>
             <TabButton/>
             <GreenButton text="New milestone" onClick={() => (location.href = '/milestone-add')} />
-        </Buttons>
+        </FlexDiv>
         <TableListHeader/>
         <TableList/>
     </MilestonePage>

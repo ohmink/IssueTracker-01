@@ -47,7 +47,7 @@ const IssueInputButtons = () => {
       }
 
       const result = await axios.post(
-        'http://api.hoyoung.me/api/issue',
+        'http://49.50.166.157:3000/api/issue',
         {
           ...data,
         },
@@ -55,7 +55,7 @@ const IssueInputButtons = () => {
       );
 
       if (result.status === 200) {
-        window.location.href = '/issue';
+        window.location.href = '/main';
       } else {
         alert('에러');
       }

@@ -66,7 +66,7 @@ const CreateMilestoneButton = styled.button`
 
 const MilestoneAddFrom = () => {
   const createButtonClicked = async () => {
-    const result = await axios.post('http://api.hoyoung.me/api/milestone', {
+    const result = await axios.post('http://49.50.166.157:3000/api/milestone', {
       title: titleInput.current.value,
       dueDate: dueDateInput.current.value,
       description: descInput.current.value,

@@ -13,7 +13,7 @@ const UserListProvider = ({ children }) => {
         setLoading(true);
         setUser(null);
 
-        const result = await axios.get('http://api.hoyoung.me/api/user', { withCredentials: true });
+        const result = await axios.get('http://49.50.166.157:3000/api/user', { withCredentials: true });
 
         setUser(result.data.data);
       } catch (error) {

@@ -6,3 +6,9 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0 auto;
     }
 `;
+
+export const GlobalDiv = styled.div`
+    width: 78%;
+    margin: 0 auto;
+    margin-top: 3%;
+`;

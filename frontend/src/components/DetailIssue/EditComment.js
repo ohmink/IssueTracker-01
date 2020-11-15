@@ -95,8 +95,9 @@ const EditComment = ({ setEdit, comment, fetchData }) => {
   });
   const onUpdate = useCallback(async () => {
     try {
+      console.log("try");
       await axios.patch(
-        `http://api.hoyoung.me/api/comment/${comment.commentId}`,
+        `http://49.50.166.157:3000/api/comment/${comment.commentId}`,
         { content: text },
         {
           withCredentials: true,

@@ -68,7 +68,7 @@ const MilestoneProgress = (props) => {
   };
 
   const DeleteClicked = async () => {
-    const result = await axios.delete('http://api.hoyoung.me/api/milestone/' + milestoneId, {
+    const result = await axios.delete('http://49.50.166.157:3000/api/milestone/' + milestoneId, {
       withCredentials: true,
     });
 

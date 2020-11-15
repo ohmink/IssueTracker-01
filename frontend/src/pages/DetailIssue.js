@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 import styled from 'styled-components';
-import Header from '../components/util/Header';
 import Title from '../components/DetailIssue/Title';
 import CommentList from '../components/DetailIssue/CommentList';
 import AddComment from '../components/DetailIssue/AddComment';
@@ -23,7 +22,7 @@ const DetailIssue = ({ match }) => {
   const [comment, setComment] = useState({});
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get(`http://api.hoyoung.me/api/issue/detailIssue/${issueId}`, {
+      const response = await axios.get(`http://49.50.166.157:3000/api/issue/detailIssue/${issueId}`, {
         withCredentials: true,
       });
       setDetailIssue(response.data);
@@ -41,7 +40,6 @@ const DetailIssue = ({ match }) => {
       ) : (
         <div>
           <div>
-            <Header />
             <Box>
               <Title detailIssue={detailIssue} />
               <CommentList comments={detailIssue.Comments} setEdit={setEdit} setComment={setComment} />

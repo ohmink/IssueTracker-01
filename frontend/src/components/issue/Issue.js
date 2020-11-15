@@ -7,6 +7,7 @@ const Issue = ({ item, history }) => {
   const onClick = useCallback(() => {
     history.push(`/detailIssue/${item.issueId}`);
   });
+  console.log(item);
   return (
     <FlexDiv>
       <StyledCheckboxLabel>
@@ -24,13 +25,13 @@ const Issue = ({ item, history }) => {
       <IssueTitleColumn>
         <IssueTitle onClick={onClick}>{item.title}</IssueTitle>
         <span>
-          {item.IssueLabels.map((issueLabel) => {
+          {/* {item.IssueLabels.map((issueLabel) => {
             return (
               <PreviewLabel key={issueLabel.id} color={issueLabel.Label.color}>
                 <span>{issueLabel.Label.labelName}</span>
               </PreviewLabel>
             );
-          })}
+          })} */}
         </span>
         <IssueInfo>
           {item.isOpen === 1
@@ -41,7 +42,7 @@ const Issue = ({ item, history }) => {
         </IssueInfo>
       </IssueTitleColumn>
       <IssueEtc>
-        <Etc>{item.User && item.User.profile_url ? <Profile src={item.User.profile_url} /> : ''}</Etc>
+        {/* <Etc>{item.User && item.User.profile_url ? <Profile src={item.User.profile_url} /> : ''}</Etc> */}
       </IssueEtc>
     </FlexDiv>
   );

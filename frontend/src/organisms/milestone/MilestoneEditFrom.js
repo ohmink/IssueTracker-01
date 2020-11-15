@@ -107,7 +107,7 @@ const MilestoneEditFrom = (props) => {
   const descInput = useRef();
 
   const updateButtonClicked = async () => {
-    const result = await axios.patch(`http://api.hoyoung.me/api/milestone/${Number(data.milestoneId)}`, {
+    const result = await axios.patch(`http://49.50.166.157:3000/api/milestone/${Number(data.milestoneId)}`, {
       title: titleInput.current.value,
       dueDate: dueDateInput.current.value,
       description: descInput.current.value,

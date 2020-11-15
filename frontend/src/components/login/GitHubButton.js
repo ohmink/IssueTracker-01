@@ -28,7 +28,7 @@ const GitHubLoginButton = styled.button`
 
 const GitHubButton = () => {
   const onClick = () => {
-    window.location.href = 'http://api.hoyoung.me/oauth/github';
+    window.location.href = 'http://49.50.166.157:3000/oauth/github';
   };
   return (
     <GitHubLoginButton onClick={onClick}>

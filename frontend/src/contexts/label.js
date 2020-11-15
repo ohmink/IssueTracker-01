@@ -12,9 +12,11 @@ const labelReducer = (state, action) => {
 
 export const loadLabels = async (dispatch) => {
   try {
-    const response = await axios.get('http://api.hoyoung.me/api/label', {
+    console.log("be")
+    const response = await axios.get('http://49.50.166.157:3000/api/label', {
       withCredentials: true,
     });
+    console.log(response.data.data);
     dispatch({ type: 'LOAD', data: response.data.data });
   } catch (err) {
     console.log(err);
@@ -23,7 +25,7 @@ export const loadLabels = async (dispatch) => {
 
 export const createLabel = async (dispatch, label) => {
   try {
-    const response = await axios.post('http://api.hoyoung.me/api/label', label, {
+    const response = await axios.post('http://49.50.166.157:3000/api/label', label, {
       withCredentials: true,
     });
     await loadLabels(dispatch);
@@ -34,7 +36,7 @@ export const createLabel = async (dispatch, label) => {
 
 export const updateLabel = async (dispatch, label) => {
   try {
-    const response = await axios.patch('http://api.hoyoung.me/api/label', label, {
+    const response = await axios.patch('http://49.50.166.157:3000/api/label', label, {
       withCredentials: true,
     });
     await loadLabels(dispatch);
@@ -45,7 +47,7 @@ export const updateLabel = async (dispatch, label) => {
 
 export const deleteLabel = async (dispatch, labelName) => {
   try {
-    const response = await axios.delete(`http://api.hoyoung.me/api/label/${labelName}`, {
+    const response = await axios.delete(`http://49.50.166.157:3000/api/label/${labelName}`, {
       withCredentials: true,
     });
     await loadLabels(dispatch);

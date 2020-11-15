@@ -22,7 +22,7 @@ const Login = ({ history }) => {
   useEffect(() => {
     const checkLogin = async () => {
       try {
-        const response = await axios.get('http://api.hoyoung.me/isLogin', { withCredentials: true });
+        const response = await axios.get('http://49.50.166.157:3000/isLogin', { withCredentials: true });
         setUser({
           userId: response.data.userId,
           profileUrl: response.data.profileUrl,
