@@ -1,6 +1,7 @@
 #!/bin/bash
 
-for PID in $(pgrep -fl node | awk '{print $1}'); do
+for PID in $(pgrep -fl node | awk '{print $1}');
+do
     echo "> kill -15 $PID"
     kill -15 $PID
     sleep 1
